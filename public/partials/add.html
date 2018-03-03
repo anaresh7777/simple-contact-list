@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <p class="panel-title"><span style="color:#5bc0de;" class="glyphicon glyphicon-plus"> </span> Add New Contact</p>
+    </div>
+    <div class="panel-body">
+        <form ng-submit="addContact()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" ng-model="contact.name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" ng-model="contact.email">
+            </div>
+            <div class="form-group">
+                <label for="number">Contact No. :</label>
+                <input type="text" class="form-control" id="number" ng-model="contact.number">
+            </div>
+            <button type="submit" style="color:#5bc0de;" class="btn btn-default">Save</button>
+            <a href="#/contacts" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-remove-circle"></i></a>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="panel panel-default" ng-init="getContact()">
+    <div class="panel-heading">
+        <p class="panel-title"><span style="color:#5bc0de;"
+                                     class="glyphicon glyphicon-list"> </span> Contact List</p>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th><i class="glyphicon glyphicon-user"></i> Name</th>
+                <th><i class="glyphicon glyphicon-envelope"></i> Email</th>
+                <th><i class="glyphicon glyphicon-phone"></i> Phone Number</th>
+                <th><i class="glyphicon glyphicon-cog"></i> Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="contact in contacts | orderBy:'name' | filter:searchText">
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.number }}</td>
+                <td>
+                    <a href="#/contacts/{{contact._id}}/show" class="btn btn-sm btn-info"><i class="glyphicon glyphicon-eye-open"></i></a>
+                    <a href="#/contacts/{{contact._id}}/edit" class="btn btn-sm btn-warning"><i class="glyphicon glyphicon-edit"> </i></a>
+                    <a ng-click="deleteContact(contact._id)" class="btn btn-sm btn-danger"><i class="glyphicon glyphicon-trash"> </i></a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

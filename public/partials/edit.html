@@ -1,0 +1,24 @@
+<div class="panel panel-default" ng-init="showContact()">
+    <div class="panel-heading">
+        <p class="panel-title"><span style="color:#5bc0de;"
+                                     class="glyphicon glyphicon-edit"> </span> Edit Contact</p>
+    </div>
+    <div class="panel-body">
+        <form ng-submit="updateContact()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" ng-model="contact.name" value="contact.name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" id="email" ng-model="contact.email" value="contact.email">
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number :</label>
+                <input type="text" class="form-control" id="number" ng-model="contact.number" value="contact.number">
+            </div>
+            <button type="submit" style="color:#5bc0de;" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-ok-circle"></i></button>
+            <a href="#/contacts" class="btn btn-sm btn-default"><i class="glyphicon glyphicon-remove-circle"></i></a>
+        </form>
+    </div>
+</div>
